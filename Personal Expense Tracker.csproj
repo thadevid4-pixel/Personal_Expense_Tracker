@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{090E8044-EBDF-48CB-B207-B108CD47FD45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Personal_Expense_Tracker</RootNamespace>
+    <AssemblyName>Personal Expense Tracker</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CategoryControlForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CategoryControlForm.Designer.cs">
+      <DependentUpon>CategoryControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryData.cs" />
+    <Compile Include="Db.cs" />
+    <Compile Include="AdminPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BackupService.cs" />
+    <Compile Include="CsvHelper.cs" />
+    <Compile Include="FilterBar.cs" />
+    <Compile Include="MonthlyChart.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PasswordHasher.cs" />
+    <Compile Include="Prompt.cs" />
+    <Compile Include="ReportsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Session.cs" />
+    <Compile Include="UsersPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Form.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard_Form.Designer.cs">
+      <DependentUpon>Dashboard_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpensesData.cs" />
+    <Compile Include="ExpensesForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExpensesForm.Designer.cs">
+      <DependentUpon>ExpensesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeData.cs" />
+    <Compile Include="IncomeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="IncomeForm.Designer.cs">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personal Expense Tracker\Properties\Resources.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RigisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RigisterForm.Designer.cs">
+      <DependentUpon>RigisterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CategoryControlForm.resx">
+      <DependentUpon>CategoryControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard_Form.resx">
+      <DependentUpon>Dashboard_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpensesForm.resx">
+      <DependentUpon>ExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeForm.resx">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RigisterForm.resx">
+      <DependentUpon>RigisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0814491.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 081449.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 081556.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo_2026-09-21_12-17-37.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816381.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0815561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816091.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816421.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816181.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816241.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-09-30 0816321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7ad13995-af10-4f50-b306-260b77b265553.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-growth.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
