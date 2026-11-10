@@ -1,0 +1,3 @@
+			   				Feature For Project Persona Expense Tracker
+
+1.បើចង់ឃើញទិន្ន័យក្នុង Income's Data(today,yesterday,this_mounth,this_year) ដែលទើបតែបំពេញក្នុង​ Income (dashboard) ត្រូវ​ Register or Run Code.
